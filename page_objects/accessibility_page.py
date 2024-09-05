@@ -6,14 +6,14 @@ class CowrywisePage:
     def __init__(self, driver):
         self.driver = driver
 
-    # Example locators for text and background elements
     def get_text_element(self):
         return WebDriverWait(self.driver, 10).until(
         EC.presence_of_element_located((By.CSS_SELECTOR, ".header-text.is-header-caption.is-header-size"))
-    )  # Update selector as needed
+    )  # Update selector as needed for the website
 
     def get_background_element(self):
-        return self.driver.find_element(By.CSS_SELECTOR, "#bulkit-landing")  # Update selector as needed
+        return self.driver.find_element(By.CSS_SELECTOR, "#bulkit-landing")  # Update selector as needed for the website
+
 
 
 class AccessibilityPage:
@@ -23,7 +23,6 @@ class AccessibilityPage:
     # ARIA (Accessible Rich Internet Applications)
     def get_aria_elements(self):
         """Return elements with ARIA attributes."""
-        # Wait for the elements to be present (adjust the timeout as needed)
         WebDriverWait(self.driver, 10).until(
             EC.presence_of_element_located((By.XPATH, '//*[starts-with(@aria-, "")]'))
         )

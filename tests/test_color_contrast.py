@@ -3,10 +3,6 @@ from selenium import webdriver
 from page_objects.accessibility_page import CowrywisePage
 from selenium.common.exceptions import NoSuchElementException
 from utils.contrast_calculator import calculate_color_contrast
-import wcag_contrast_ratio
-
-# List all attributes of the module to find available functions
-print(dir(wcag_contrast_ratio))
 
 
 # Constants for color codes (update as needed)
@@ -17,7 +13,7 @@ MIN_CONTRAST_RATIO = 4.5  # Minimum WCAG AA contrast ratio
 @pytest.fixture(scope="module")
 def driver():
     driver = webdriver.Chrome()
-    driver.get("https://cowrywise.com/")  # Replace with the actual URL
+    driver.get("https://cowrywise.com/")  # Replace with the targeted URL
     yield driver
     driver.quit()
 
