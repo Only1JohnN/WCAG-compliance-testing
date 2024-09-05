@@ -7,7 +7,6 @@ def rgba_to_rgb(rgba):
         return tuple(int(match.group(i)) for i in range(1, 4))
     raise ValueError("Invalid RGBA format")
 
-
 def hex_to_rgb(hex_color):
     """Convert HEX color code to RGB tuple."""
     # Remove '#' if present
@@ -23,8 +22,6 @@ def hex_to_rgb(hex_color):
     except ValueError as e:
         raise ValueError(f"Invalid HEX color value: {e}")
 
-
-
 def luminance(rgb):
     """Calculate luminance of an RGB color."""
     r, g, b = [x / 255.0 for x in rgb]
@@ -33,8 +30,16 @@ def luminance(rgb):
 
 def calculate_color_contrast(color1, color2):
     """Calculate the contrast ratio between two colors."""
-    rgb1 = hex_to_rgb(color1)
-    rgb2 = hex_to_rgb(color2)
-    lum1 = luminance(rgb1)
-    lum2 = luminance(rgb2)
+    if color1.startswith('rgba'):
+        color1 = rgba_to_rgb(color1)
+    else:
+        color1 = hex_to_rgb(color1)
+
+    if color2.startswith('rgba'):
+        color2 = rgba_to_rgb(color2)
+    else:
+        color2 = hex_to_rgb(color2)
+
+    lum1 = luminance(color1)
+    lum2 = luminance(color2)
     return (max(lum1, lum2) + 0.05) / (min(lum1, lum2) + 0.05)

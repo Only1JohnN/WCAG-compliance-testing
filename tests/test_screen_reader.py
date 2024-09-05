@@ -17,7 +17,4 @@ def test_screen_reader(driver):
     
     # Assert that ARIA elements are found
     assert len(aria_elements) > 0, "No ARIA attributes found on the page."
-    
-    for element in aria_elements:
-        print(element.get_attribute('outerHTML'))
 

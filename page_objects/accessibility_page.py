@@ -8,7 +8,9 @@ class CowrywisePage:
 
     # Example locators for text and background elements
     def get_text_element(self):
-        return self.driver.find_element(By.CSS_SELECTOR, ".header-text.is-header-caption.is-header-size")  # Update selector as needed
+        return WebDriverWait(self.driver, 10).until(
+        EC.presence_of_element_located((By.CSS_SELECTOR, ".header-text.is-header-caption.is-header-size"))
+    )  # Update selector as needed
 
     def get_background_element(self):
         return self.driver.find_element(By.CSS_SELECTOR, "#bulkit-landing")  # Update selector as needed
