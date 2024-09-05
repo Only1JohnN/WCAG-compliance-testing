@@ -1,6 +1,5 @@
 import pytest
 from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
 from pages.cowrywise_page import CowrywisePage
 from utils.contrast_calculator import calculate_color_contrast
 import wcag_contrast_ratio
@@ -10,13 +9,13 @@ print(dir(wcag_contrast_ratio))
 
 
 # Constants for color codes (update as needed)
-TEXT_COLOR = '#000000'  # Black
+TEXT_COLOR = '#082552'  # Black
 BACKGROUND_COLOR = '#FFFFFF'  # White
 MIN_CONTRAST_RATIO = 4.5  # Minimum WCAG AA contrast ratio
 
 @pytest.fixture(scope="module")
 def driver():
-    driver = webdriver.Chrome(ChromeDriverManager().install())
+    driver = webdriver.Chrome()
     driver.get("https://cowrywise.com/")  # Replace with the actual URL
     yield driver
     driver.quit()

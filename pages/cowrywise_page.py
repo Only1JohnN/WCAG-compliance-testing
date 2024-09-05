@@ -6,7 +6,7 @@ class CowrywisePage:
 
     # Example locators for text and background elements
     def get_text_element(self):
-        return self.driver.find_element(By.CSS_SELECTOR, 'p.text-element')  # Update selector as needed
+        return self.driver.find_element(By.CSS_SELECTOR, "h2[class='xl']")  # Update selector as needed
 
     def get_background_element(self):
-        return self.driver.find_element(By.CSS_SELECTOR, 'div.background-element')  # Update selector as needed
+        return self.driver.find_element(By.CSS_SELECTOR, ".bars-section")  # Update selector as needed

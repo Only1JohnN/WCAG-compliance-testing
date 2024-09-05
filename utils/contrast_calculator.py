@@ -1,7 +1,18 @@
 def hex_to_rgb(hex_color):
     """Convert HEX color code to RGB tuple."""
+    # Remove '#' if present
     hex_color = hex_color.lstrip('#')
-    return tuple(int(hex_color[i:i+2], 16) for i in (0, 2, 4))
+    
+    # Validate HEX color length
+    if len(hex_color) != 6:
+        raise ValueError("Invalid HEX color format. Should be 6 characters long.")
+    
+    # Convert HEX to RGB
+    try:
+        return tuple(int(hex_color[i:i+2], 16) for i in (0, 2, 4))
+    except ValueError as e:
+        raise ValueError(f"Invalid HEX color value: {e}")
+
 
 def luminance(rgb):
     """Calculate luminance of an RGB color."""
