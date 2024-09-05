@@ -30,22 +30,22 @@ This project provides automated scripts to test web applications against WCAG st
 
 - **Python**: Programming language used for writing test scripts.
 - **Selenium**: For browser automation.
+- **webdriver-manager**: Automatically manages and sets up WebDriver binaries.
+- **pytest**: For running the test scripts and reporting results.
 - **WCAG-Contrast-Ratio**: For calculating color contrast ratios.
-- **WebDriver**: For interacting with browsers (Chrome, Firefox, etc.).
 
 ## Setup
 
 ### Prerequisites
 
 1. Python 3.7 or above installed on your machine.
-2. Selenium WebDriver (e.g., ChromeDriver) installed and accessible in your system path.
 
 ### Installation
 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/Only1JohnN/WCAG-Compliance-Testing/tree/main
+   git clone https://github.com/yourusername/WCAG-Compliance-Testing.git
    cd WCAG-Compliance-Testing
    ```
 
@@ -55,20 +55,20 @@ This project provides automated scripts to test web applications against WCAG st
    pip install -r requirements.txt
    ```
 
-3. Update the WebDriver path in your test scripts if necessary.
+3. The `webdriver-manager` will automatically handle WebDriver binaries, so no need for manual WebDriver setup.
 
 ## Usage
 
 1. **Run Color Contrast Test**:
 
    ```bash
-   python tests/test_color_contrast.py
+   pytest tests/test_color_contrast.py
    ```
 
 2. **Run Screen Reader Test**:
 
    ```bash
-   python tests/test_screen_reader.py
+   pytest tests/test_screen_reader.py
    ```
 
 Review the output logs to see any issues detected and suggestions for compliance.
@@ -102,4 +102,18 @@ Contributions are welcome! Please follow these steps:
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/Only1JohnN/WCAG-Compliance-Testing/blob/main/LICENSE) file for details.
+# Custom License
+
+Copyright (c) 2024 Adeniyi John
+
+## Terms of Use
+
+1. **Permission Required**: This software and its associated documentation files (the "Software") cannot be used, copied, modified, merged, published, distributed, or otherwise dealt with in any way until you have obtained explicit permission from the copyright holder, Adeniyi John.
+
+2. **Contact Information**: To request permission, please contact Adeniyi John at [your contact information].
+
+3. **No Warranty**: The Software is provided "as is," without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose, and noninfringement. In no event shall the author or copyright holder be liable for any claim, damages, or other liability, whether in an action of contract, tort, or otherwise, arising from, out of, or in connection with the Software or the use or other dealings in the Software.
+
+## Usage
+
+To use the Software, please ensure you have received written consent from Adeniyi John. Unauthorized use is prohibited.
