@@ -1,3 +1,13 @@
+import re
+
+def rgba_to_rgb(rgba):
+    """Convert RGBA color format to RGB tuple."""
+    match = re.match(r'rgba\((\d+),\s*(\d+),\s*(\d+),\s*\d*\)', rgba)
+    if match:
+        return tuple(int(match.group(i)) for i in range(1, 4))
+    raise ValueError("Invalid RGBA format")
+
+
 def hex_to_rgb(hex_color):
     """Convert HEX color code to RGB tuple."""
     # Remove '#' if present
@@ -12,6 +22,7 @@ def hex_to_rgb(hex_color):
         return tuple(int(hex_color[i:i+2], 16) for i in (0, 2, 4))
     except ValueError as e:
         raise ValueError(f"Invalid HEX color value: {e}")
+
 
 
 def luminance(rgb):

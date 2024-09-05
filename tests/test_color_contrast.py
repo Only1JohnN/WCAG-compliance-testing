@@ -1,6 +1,6 @@
 import pytest
 from selenium import webdriver
-from pages.cowrywise_page import CowrywisePage
+from page_objects.accessibility_page import CowrywisePage
 from utils.contrast_calculator import calculate_color_contrast
 import wcag_contrast_ratio
 
@@ -35,4 +35,5 @@ def test_color_contrast(driver):
     print(f'Contrast Ratio: {contrast_ratio}')
     
     # Assert that the contrast ratio meets the minimum requirement
-    assert contrast_ratio >= MIN_CONTRAST_RATIO, f"Contrast ratio {contrast_ratio} is below the minimum required {MIN_CONTRAST_RATIO}"
+    # assert contrast_ratio >= MIN_CONTRAST_RATIO, f"Contrast ratio {contrast_ratio} is below the minimum required {MIN_CONTRAST_RATIO}"
+    assert contrast_ratio > 4.5
