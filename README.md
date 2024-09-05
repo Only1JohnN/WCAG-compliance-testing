@@ -45,7 +45,7 @@ This project provides automated scripts to test web applications against WCAG st
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/WCAG-Compliance-Testing.git
+   git clone https://github.com/Only1JohnN/WCAG-Compliance-Testing/tree/main
    cd WCAG-Compliance-Testing
    ```
 
