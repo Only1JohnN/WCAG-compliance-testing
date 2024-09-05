@@ -132,7 +132,7 @@ Copyright (c) 2024 Adeniyi John
 
 1. **Permission Required**: This software and its associated documentation files (the "Software") cannot be used, copied, modified, merged, published, distributed, or otherwise dealt with in any way until you have obtained explicit permission from the copyright holder, Adeniyi John.
 
-2. **Contact Information**: To request permission, please contact Adeniyi John at [your contact information].
+2. **Contact Information**: To request permission, please contact Adeniyi John.
 
 3. **No Warranty**: The Software is provided "as is," without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose, and noninfringement. In no event shall the author or copyright holder be liable for any claim, damages, or other liability, whether in an action of contract, tort, or otherwise, arising from, out of, or in connection with the Software or the use or other dealings in the Software.
 
