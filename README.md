@@ -40,22 +40,43 @@ This project provides automated scripts to test web applications against WCAG st
 
 1. Python 3.7 or above installed on your machine.
 
-### Installation
+### Create and Activate a Virtual Environment
 
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/yourusername/WCAG-Compliance-Testing.git
-   cd WCAG-Compliance-Testing
-   ```
-
-2. Install the required packages:
+1. Navigate to your project directory:
 
    ```bash
-   pip install -r requirements.txt
+   cd path/to/WCAG-Compliance-Testing
    ```
 
-3. The `webdriver-manager` will automatically handle WebDriver binaries, so no need for manual WebDriver setup.
+2. Create a virtual environment:
+
+   ```bash
+   python -m venv venv
+   ```
+
+3. Activate the virtual environment:
+
+   - **On Windows**:
+
+     ```bash
+     venv\Scripts\activate
+     ```
+
+   - **On macOS/Linux**:
+
+     ```bash
+     source venv/bin/activate
+     ```
+
+### Install Dependencies
+
+With the virtual environment active, install the required packages:
+
+```bash
+pip install -r requirements.txt
+```
+
+The `webdriver-manager` will automatically handle WebDriver binaries, so no need for manual WebDriver setup.
 
 ## Usage
 
@@ -87,7 +108,8 @@ WCAG-Compliance-Testing/
 │
 ├── requirements.txt               # List of dependencies
 ├── README.md                      # Project documentation
-└── .gitignore                     # Git ignore file
+├── .gitignore                     # Git ignore file
+└── venv/                          # Virtual environment directory (not included in version control)
 ```
 
 ## Contributing
