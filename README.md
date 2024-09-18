@@ -105,11 +105,12 @@ WCAG-Compliance-Testing/
 ├── tests/                         # Test scripts for different accessibility checks
 │   ├── test_color_contrast.py     # Script for color contrast testing
 │   ├── test_screen_reader.py      # Script for screen reader testing
+├── utils/                         # Test scripts for different accessibility checks
+│   ├── contrast_calculator.py     # Script for color contrast testing
 │
 ├── requirements.txt               # List of dependencies
 ├── README.md                      # Project documentation
 ├── .gitignore                     # Git ignore file
-└── venv/                          # Virtual environment directory (not included in version control)
 ```
 
 ## Contributing
