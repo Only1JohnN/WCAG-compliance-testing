@@ -11,5 +11,7 @@ venv.bak/
 __pycache__/
 *.pyc
 
+.DS_Store
+
 # Screenshots
 screenshots/
